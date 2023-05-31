@@ -59,5 +59,17 @@ public class EmployeeManager {
         return employeeList;
     }
 
+    public HashSet<Employee> searchEmployeesByLastname(String lastname){
+        HashSet<Employee> employeeList = new HashSet<>(employees.values());
+        Iterator<Employee> employeeIterator = employeeList.iterator();
+        while(employeeIterator.hasNext())
+        {
+            Employee employee = employeeIterator.next();
+            if(!employee.getLastName().equals(lastname))
+                employeeIterator.remove();
+        }
+        return employeeList;
+    }
+
 
 }

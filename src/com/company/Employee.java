@@ -3,6 +3,11 @@ package com.company;
 public class Employee {
 
     private String firstName;
+
+    public String getLastName() {
+        return lastName;
+    }
+
     private String lastName;
 
     public void setPosition(String position) {
