@@ -65,6 +65,7 @@ public class Main {
                     break;
                 case 2:
                 {
+                    System.out.println("Podaj id pracownika do usunięcia <potwierdz Enter>:");
                     int id = Integer.parseInt(bufferedReader.readLine());
                     employeeManager.removeEmployee(employeeManager.searchEmployeeByID(id));
                     break;
