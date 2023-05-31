@@ -81,6 +81,10 @@ public class Main {
                         System.out.println("Podaj nowe zarobki pracownika <potwierdz Enter>:");
                         int noweZarobki = Integer.parseInt(bufferedReader.readLine());
                         employee.setSalary(noweZarobki);
+                        System.out.println("Obecne stanowisko pracownika: " + employee.getPosition());
+                        System.out.println("Podaj nowe stanowisko pracownika <potwierdz Enter>:");
+                        String noweStanowisko = bufferedReader.readLine();
+                        employee.setPosition(noweStanowisko);
                         employeeManager.updateEmployee(id,employee);}
                     break;
 
