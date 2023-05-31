@@ -72,10 +72,14 @@ public class Main {
                 }
                 case 3:
                 {
+                    System.out.println("Podaj id pracownika do edycji <potwierdz Enter>:");
                     int id = Integer.parseInt(bufferedReader.readLine());
                     Employee employee = employeeManager.searchEmployeeByID(id);
                     if(employee != null){
-                        employee.setSalary(10000);
+                        System.out.println("Obecne zarobki pracownika: " + employee.getSalary());
+                        System.out.println("Podaj nowe zarobki pracownika <potwierdz Enter>:");
+                        int noweZarobki = Integer.parseInt(bufferedReader.readLine());
+                        employee.setSalary(noweZarobki);5
                         employeeManager.updateEmployee(id,employee);}
                     break;
 

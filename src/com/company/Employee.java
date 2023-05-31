@@ -6,6 +6,11 @@ public class Employee {
     private String lastName;
     private String position;
     private int employeeID;
+
+    public int getSalary() {
+        return salary;
+    }
+
     private int salary;
 
     public Employee(String firstName, String lastName, String position, int employeeID, int salary) {
