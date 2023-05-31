@@ -10,14 +10,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Employee employee1 = new Employee("John", "Doe", "Manager", 1, 75000);
-        Employee employee2 = new Employee("Jane", "Smith", "Accountant", 2, 60000);
-        Employee employee3 = new Employee("Michael", "Johnson", "Accountant", 3, 55000);
-        Employee employee4 = new Employee("Emily", "Jones", "Marketing Specialist", 4, 50000);
-        Employee employee5 = new Employee("David", "Brown", "Accountant", 5, 45000);
-        Employee employee6 = new Employee("Laura", "Taylor", "Human Resources Manager", 6, 70000);
-        Employee employee7 = new Employee("Kevin", "Wilson", "IT Specialist", 7, 60000);
-        Employee employee8 = new Employee("Samantha", "Davis", "Customer Service Representative", 8, 40000);
+        int employeeID = 1;
+
+        Employee employee1 = new Employee("John", "Doe", "Manager", employeeID++, 75000);
+        Employee employee2 = new Employee("Jane", "Smith", "Accountant", employeeID++, 60000);
+        Employee employee3 = new Employee("Michael", "Johnson", "Accountant", employeeID++, 55000);
+        Employee employee4 = new Employee("Emily", "Jones", "Marketing Specialist", employeeID++, 50000);
+        Employee employee5 = new Employee("David", "Brown", "Accountant", employeeID++, 45000);
+        Employee employee6 = new Employee("Laura", "Taylor", "Human Resources Manager", employeeID++, 70000);
+        Employee employee7 = new Employee("Kevin", "Wilson", "IT Specialist", employeeID++, 60000);
+        Employee employee8 = new Employee("Samantha", "Davis", "Customer Service Representative", employeeID++, 40000);
 
 
         String imie = null;
@@ -58,10 +60,9 @@ public class Main {
                     stanowisko=inputReader.nextLine();
                     System.out.println("Określ zarobki <potwierdz Enter>:");
                     zarobki= Integer.parseInt(bufferedReader.readLine());
-                    System.out.println("Określ id <potwierdz Enter>:");
-                    idWorker= Integer.parseInt(bufferedReader.readLine());
+
                     //System.out.println("imie, nazwisko, stanowisko, zarobki, id: "+imie+", "+nazwisko+", "+stanowisko+", "+zarobki+", "+idWorker);
-                    employeeManager.addEmployee(new Employee(imie, nazwisko, stanowisko, idWorker, zarobki));
+                    employeeManager.addEmployee(new Employee(imie, nazwisko, stanowisko, employeeID++, zarobki));
                     break;
                 case 2:
                 {
