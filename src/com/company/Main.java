@@ -79,13 +79,14 @@ public class Main {
                         System.out.println("Obecne zarobki pracownika: " + employee.getSalary());
                         System.out.println("Podaj nowe zarobki pracownika <potwierdz Enter>:");
                         int noweZarobki = Integer.parseInt(bufferedReader.readLine());
-                        employee.setSalary(noweZarobki);5
+                        employee.setSalary(noweZarobki);
                         employeeManager.updateEmployee(id,employee);}
                     break;
 
                 }
                 case 4:
                 {
+                    System.out.println("Podaj id pracownika do wyszukania <potwierdz Enter>:");
                     int id = Integer.parseInt(bufferedReader.readLine());
                     Employee employee = employeeManager.searchEmployeeByID(id);
                     System.out.println(employee);
