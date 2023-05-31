@@ -99,6 +99,7 @@ public class Main {
                 }
                 case 6:
                 {
+                    System.out.println("Podaj stanowisko pracownika do wyszukania <potwierdz Enter>:");
                     String position = bufferedReader.readLine();
                     HashSet<Employee> employeeHashSet = employeeManager.searchEmployeesByPosition(position);
                     for (Employee employee: employeeHashSet
